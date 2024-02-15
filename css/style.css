@@ -56,6 +56,13 @@ nav a:active {
     padding: 20px;
 }
 
+#greet {
+    font-family:sans-serif;
+    color: white;  
+    text-align: center;
+    font-size: 30px;
+}
+
 .htext {
     font-family:sans-serif;
     color: white;  
@@ -63,6 +70,20 @@ nav a:active {
 }
 
 .ptext {
+    text-align: center;
+    width: 40%;
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 20px; 
+    color: white;
+    font-size: 30px;
+    font-family: sans-serif;
+    padding: 25px;
+}
+
+#dogInfo {
     text-align: center;
     width: 40%;
     margin: 0 auto; 
