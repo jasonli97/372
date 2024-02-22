@@ -8,9 +8,9 @@ function Dog(name, breed, age) {
 // Create an array of Dog instances
 //array data isn't completely accurate will update I talk with my client
 let dogs = [
-    new Dog("Molly", "Puggle", 2), 
-    new Dog("Nori", "Chihuahua", 3),
-    new Dog("Mocha", "Feist", 5)
+    new Dog("Molly", "Puggle", 19), 
+    new Dog("Nori", "Labrador Pitbull", 4),
+    new Dog("Mocha", "Pomsky ", 2)
 ];
 
 // Function to capitalize the first letter of a string
