@@ -26,6 +26,7 @@ main {
 }
 
 aside {
+    flex: 1;
     padding: 20px;
     background-color: #EF798A; 
     float: right; 
@@ -55,4 +56,7 @@ aside {
         margin-right: 0px;
     }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> cb3820dd66105f21d446e147beff47942ae38a73
