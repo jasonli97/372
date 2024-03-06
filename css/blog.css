@@ -1,0 +1,58 @@
+.pHeader{
+    font-family:sans-serif;
+    color: white; 
+}
+
+.pContent {
+    font-family:sans-serif;
+    color: white;   
+}
+
+.sideText {
+    font-family:sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+main {
+    flex: 2;
+    padding: 20px;
+    background-color: #F7A9A8;
+    margin-right: 20px;
+}
+
+aside {
+    padding: 20px;
+    background-color: #EF798A; 
+    float: right; 
+    border:20px;
+}
+
+.sidebar {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    aside {
+        order: 0;
+        margin-bottom: 20px; 
+        margin-right: 0; 
+    }
+
+    main {
+        order: 1; 
+        margin-right: 0px;
+    }
+}
+
