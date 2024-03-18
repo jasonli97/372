@@ -42,3 +42,18 @@ cardInfo(0, "molly.jpg", "Molly", "Puggle", "19 years old");
 cardInfo(1, "nori.jpg", "Nori", "Labrador Pitbull", "4 years old");
 cardInfo(2, "mocha.jpg", "Mocha", "Pomsky", "2 years old");
 
+// Function to add alt tag to an image
+function addAltTag(cardNumber, altText) {
+    // Grab the card element 
+    var card = document.getElementsByClassName('card')[cardNumber];
+    // Get the image element within the card
+    var image = card.getElementsByTagName('img')[0];
+    // Set the alt attribute of the image to the specified altText
+    image.alt = altText;
+}
+
+// Add alt tags to the images
+addAltTag(0, "image of a Puggle named Molly");
+addAltTag(1, "image of a Labrador Pitbull named Nori");
+addAltTag(2, "image of a Pomsky named Mocha");
+
