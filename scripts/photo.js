@@ -1,21 +1,48 @@
-// Function to populate card information
-function cardInfo(cardNumber, imageFile, petName, petBreed, petAge) {
-    // Get the card element based on the cardNumber parameter
-    var card = document.getElementsByClassName('card')[cardNumber];
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('../photos.json') 
+    .then(response => response.json())
+    .then(data => {
+        data.forEach(photo => {
+            createPhotoCard(photo);
+        });
+    });
+});
 
-    // Append the image element to the card with the specified imageFile
-    card.innerHTML += '<img src="./images/' + imageFile + '" class="likeable-image" style="width:100%">';
+function createPhotoCard(photo) {
+    const row = document.querySelector('.row'); // Assuming .row exists
 
-    // Append the petName, petBreed, and petAge to the card as heading and paragraphs
-    card.innerHTML += '<h3>' + petName + '</h3>';
-    card.innerHTML += '<p>' + petBreed + '</p>';
-    card.innerHTML += '<p>' + petAge + '</p>';
+    // Create the column div
+    const column = document.createElement('div');
+    column.className = 'column';
 
-    // Set the position of the card to relative
-    card.style.position = 'relative'; 
+    // Create the card div
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.style.position = 'relative';
 
-    // Create a new span element for displaying the like text
-    var likeText = document.createElement('span');
+    // Add image to card
+    const img = document.createElement('img');
+    img.src = `images/${photo.imageFile}`;
+    img.className = 'likeable-image';
+    img.style.width = '100%';
+    img.alt = photo.altText;
+
+    // Add pet info to card
+    const h3 = document.createElement('h3');
+    h3.textContent = photo.petName;
+    const breedP = document.createElement('p');
+    breedP.textContent = photo.petBreed;
+    const ageP = document.createElement('p');
+    ageP.textContent = photo.petAge;
+
+    // Append elements to card
+    card.appendChild(img);
+    card.appendChild(h3);
+    card.appendChild(breedP);
+    card.appendChild(ageP);
+
+    // Add double-click "like" feature
+    const likeText = document.createElement('span');
     likeText.textContent = 'You liked this ❤️';
     likeText.style.position = 'absolute';
     likeText.style.bottom = '10px';
@@ -25,35 +52,14 @@ function cardInfo(cardNumber, imageFile, petName, petBreed, petAge) {
     likeText.style.padding = '5px';
     likeText.style.borderRadius = '5px';
     likeText.style.display = 'none';
-    card.appendChild(likeText); 
+    card.appendChild(likeText);
 
-    // Get the first image element within the card
-    var image = card.getElementsByTagName('img')[0]; 
-
-    // Add a double click event listener to the image
-    image.addEventListener('dblclick', function() {
-        // Display the like text when the image is double clicked
-        likeText.style.display = 'block'; 
+    // Add event listener for like feature
+    img.addEventListener('dblclick', function() {
+        likeText.style.display = 'block';
     });
+
+    // Append card to column, then column to row
+    column.appendChild(card);
+    row.appendChild(column);
 }
-
-// Call cardInfo for each card
-cardInfo(0, "molly.jpg", "Molly", "Puggle", "19 years old");
-cardInfo(1, "nori.jpg", "Nori", "Labrador Pitbull", "4 years old");
-cardInfo(2, "mocha.jpg", "Mocha", "Pomsky", "2 years old");
-
-// Function to add alt tag to an image
-function addAltTag(cardNumber, altText) {
-    // Grab the card element 
-    var card = document.getElementsByClassName('card')[cardNumber];
-    // Get the image element within the card
-    var image = card.getElementsByTagName('img')[0];
-    // Set the alt attribute of the image to the specified altText
-    image.alt = altText;
-}
-
-// Add alt tags to the images
-addAltTag(0, "image of a Puggle named Molly");
-addAltTag(1, "image of a Labrador Pitbull named Nori");
-addAltTag(2, "image of a Pomsky named Mocha");
-
