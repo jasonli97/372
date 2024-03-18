@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     xhr.send();
 });
 
+
 function createPhotoCard(photo) {
     const row = document.querySelector('.row'); // Assuming .row exists
 
