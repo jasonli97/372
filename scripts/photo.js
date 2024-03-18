@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('../photos.json') 
+    fetch('./photos.json') 
     .then(response => response.json())
     .then(data => {
         data.forEach(photo => {
