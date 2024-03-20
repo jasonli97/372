@@ -1,12 +1,17 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('./photos.json') 
-    .then(response => response.json())
-    .then(data => {
-        data.forEach(photo => {
-            createPhotoCard(photo);
-        });
-    });
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', './photos.json', true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            const data = JSON.parse(xhr.responseText);
+            data.forEach(photo => {
+                createPhotoCard(photo);
+            });
+        }
+    };
+    xhr.send();
 });
+
 
 function createPhotoCard(photo) {
     const row = document.querySelector('.row'); // Assuming .row exists
