@@ -1,20 +1,27 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // Create a new XMLHttpRequest object
     const xhr = new XMLHttpRequest();
+    // Open a GET request to the photos.json file
     xhr.open('GET', './photos.json', true);
+    // Set the callback function for when the request state changes
     xhr.onreadystatechange = function() {
+        // Check if the request is complete and successful
         if (xhr.readyState === 4 && xhr.status === 200) {
+            // Parse the response text as JSON
             const data = JSON.parse(xhr.responseText);
+            // Iterate over each photo in the data
             data.forEach(photo => {
+                // Call the createPhotoCard function to create a card for each photo
                 createPhotoCard(photo);
             });
         }
     };
+    // Send the request
     xhr.send();
 });
 
-
 function createPhotoCard(photo) {
-    const row = document.querySelector('.row'); // Assuming .row exists
+    const row = document.querySelector('.row'); 
 
     // Create the column div
     const column = document.createElement('div');
