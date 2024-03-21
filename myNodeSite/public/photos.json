@@ -1,0 +1,26 @@
+[
+    {
+        "id": 0,
+        "imageFile": "molly.jpg",
+        "petName": "Molly",
+        "petBreed": "Puggle",
+        "petAge": "19 years old",
+        "altText": "image of a Puggle named Molly"
+    },
+    {
+        "id": 1,
+        "imageFile": "nori.jpg",
+        "petName": "Nori",
+        "petBreed": "Labrador Pitbull",
+        "petAge": "4 years old",
+        "altText": "image of a Labrador Pitbull named Nori"
+    },
+    {
+        "id": 2,
+        "imageFile": "mocha.jpg",
+        "petName": "Mocha",
+        "petBreed": "Pomsky",
+        "petAge": "2 years old",
+        "altText": "image of a Pomsky named Mocha"
+    }
+]
