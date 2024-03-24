@@ -52,13 +52,13 @@ http.createServer(function(req,res) {
             case '/images/logo.png':
                  serveStaticFile(res, '/public/images/logo.png', 'image/png');
                  break;
-            case '/images/mocha.png':
+            case '/images/mocha.jpg':
                  serveStaticFile(res, '/public/images/mocha.jpg', 'image/jpg');
                  break;
-            case '/images/molly.png':
+            case '/images/molly.jpg':
                 serveStaticFile(res, '/public/images/molly.jpg', 'image/jpg');
                 break;
-            case '/images/nori.png':
+            case '/images/nori.jpg':
                 serveStaticFile(res, '/public/images/nori.jpg', 'image/jpg');
                 break;
             case '/scripts/about.js':
