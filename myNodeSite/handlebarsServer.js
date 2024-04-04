@@ -51,7 +51,3 @@ app.use(function(err, req, res, next) {
 app.listen(port, function() {
     console.log('Server is running on http://localhost:' + port);
 });
-
-// app.listen(port, function() {
-//     console.log('Server is running on http://localhost:' + port);
-// });
