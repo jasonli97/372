@@ -29,10 +29,6 @@ app.get('/about', function(req, res) {
     res.render('about');
 });
 
-app.get('/500', function(req, res) {
-    res.render('500');
-});
-
 app.get('/404', function(req, res) {
     res.render('404');
 });
