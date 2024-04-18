@@ -1,0 +1,53 @@
+/* form.css */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto; 
+    justify-content: center; 
+}
+input, textarea {
+    margin-bottom: 20px;
+    padding: 12px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: rgb(0, 0, 0); 
+    font-family: sans-serif; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+label {
+    margin-bottom: 5px;
+    color: white; 
+    font-family: sans-serif; 
+}
+
+.ftext {
+    margin-bottom: 5px;
+    color: white; 
+    font-family: sans-serif; 
+}
+
+textarea {
+    height: auto;
+    resize: none; 
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #F7A9A8;
+    color: white;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+button:hover {
+    background-color: #7D82B8;
+}
+
+label {
+    display: inline-block;
+    margin-right: 10px; 
+}

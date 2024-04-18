@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" id="logo"> <img src="images/logo.png" alt="website logo, with text and image of dog outdoors" width="100" height="100" id="current"> </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="photo.html">Photo Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <h1 class="htext">Contact Me</h1>
+    <div class="content">
+        <form action="submit.php" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+        
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="hello@gmail.com" required>
+        
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="401-123-4567" required>
+        
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="8" required></textarea>
+
+            <p class="ftext">How would you like to be contacted?</p>
+            <div class="radio-container">
+                <label><input type="radio" name="contact_method" value="email" required>Email</label>
+                <label><input type="radio" name="contact_method" value="text" required>Text</label>
+                <label><input type="radio" name="contact_method" value="phone" required>Phone</label>
+            </div>
+
+        
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+</html>
+
