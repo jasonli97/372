@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" id="logo"> <img src="images/logo.png" alt="website logo, with text and image of dog outdoors" width="100" height="100" id="current"> </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="photo.html">Photo Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">About</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <h1 class="htext">Photo Gallery</h1>
+    <div class="content2">
+        <p class="ptext">Double click a photo to like it!</p>
+        <div class="row">
+            <!-- Photos are loaded dynamically using AJAX -->
+        </div>
+    </div>
+    <script src="scripts/photo.js"></script>
+</body>
+</html>
