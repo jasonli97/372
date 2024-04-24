@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Create a new XMLHttpRequest object
     const xhr = new XMLHttpRequest();
     // Open a GET request to the photos.json file
-    xhr.open('GET', '/photos.json', true);
+    xhr.open('GET', './photos.json', true);
     // Set the callback function for when the request state changes
     xhr.onreadystatechange = function() {
         // Check if the request is complete and successful
