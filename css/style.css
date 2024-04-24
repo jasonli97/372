@@ -31,7 +31,8 @@ nav a {
 }
 
 nav .current {
-    background-color:#D3E5E8;
+    background-color:#e8d3d7;
+    color: #af5555;
 }
 
 nav a:hover {
