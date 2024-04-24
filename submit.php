@@ -1,53 +1,37 @@
 <?php
-include 'formVal.php';
-
-// Initialize form data and error messages arrays
-$formData = [
-    'name' => '',
-    'email' => '',
-    'phone' => '',
-    'message' => '',
-    'contact_method' => ''
-];
-$errorMessages = [
-    'name' => '',
-    'email' => '',
-    'phone' => '',
-    'message' => '',
-    'contact_method' => ''
-];
-
-// Check if the form has been submitted
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Overwrite initial values with submitted data
-    foreach ($formData as $key => $value) {
-        if (isset($_POST[$key])) {
-            $formData[$key] = htmlspecialchars($_POST[$key]);
-        }
-    }
-
-    // Validate each piece of data
-    if (!validateLength($formData['name'], 3, 50)) {
-        $errorMessages['name'] = 'Name must be between 3 and 50 characters.';
-    }
-    if (!validateLength($formData['message'], 10, 1000)) {
-        $errorMessages['message'] = 'Message must be between 10 and 1000 characters.';
-    }
-    if (!validateNumber($formData['phone'], 1000000000, 9999999999)) {
-        $errorMessages['phone'] = 'Phone number must be a valid 10-digit number.';
-    }
-    if (!validateOption($formData['contact_method'], ['email', 'text', 'phone'])) {
-        $errorMessages['contact_method'] = 'Please select a valid contact method.';
-    }
-
-    // Collect error messages
-    $errorMessageOutput = implode(" ", $errorMessages);
-    
-    // Display message based on validation results
-    if (strlen($errorMessageOutput) > 0) {
-        echo "Please correct the form errors.";
-    } else {
-        echo "Your data is valid.";
-    }
-}
+session_start();
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thank you!</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" id="logo"> <img src="images/logo.png" alt="website logo, with text and image of dog outdoors" width="100" height="100" id="current"> </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="photo.html">Photo Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class = current href="contact.php">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- <h1 class="htext">Thank you for your message!</h1>
+    <p class = "ptext">I will get back to you as soon as possible.</p>
+    <p class = "ptext"> <a href="index.html">Return Home</a> </p> -->
+
+    <?php
+    echo "<h1 class=htext>Thank you for your submission, " . htmlspecialchars($_SESSION['name']) . ".</h1>";
+
+    echo "<h1 class=htext><a href='contact.php'>Fill out another form</a> | <a href='endSession.php'>No, thanks</a><h1 class=htext>";
+    ?>
+
+</body>
+</html>
