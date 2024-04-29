@@ -30,7 +30,7 @@ session_start();
     <?php
     echo "<h1 class=htext>Thank you for your submission, " . htmlspecialchars($_SESSION['name']) . ".</h1>";
 
-    echo "<h1 class=htext><a href='contact.php'>Fill out another form</a> | <a href='endSession.php'>No, thanks</a><h1 class=htext>";
+    echo "<h1 class=htext><a href='contact.php'>Fill out another form</a> | <a href='endSession.php'>No, thanks</a></h1>";
     ?>
 
 </body>
