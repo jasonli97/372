@@ -51,3 +51,8 @@ label {
     display: inline-block;
     margin-right: 10px; 
 }
+
+.error {
+    color: red;
+    font-family: sans-serif;
+}
