@@ -4,6 +4,10 @@
     include 'includes/commentsInc.php';
 ?>
 
+<!-- The comment section was built with the help of these videos -->
+<!-- https://www.youtube.com/watch?v=kWOuUkLtQZw&list=PLArhufGdZokAJAJ7PHVQMqaZDMyN80nLE -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -111,6 +115,14 @@
             <div class="sidebar">
                 <h2 class="sideText">Want to contact me?</h2>
                 <p class="sideText">Head over to the <a href="contact.php">contact</a> page!</p>
+            </div>
+            <div class="sidebar">
+                <h2 class="sideText">Follow me online</h2>
+                <div class="socials">
+                <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook Logo" class="social-icon" width="30" height="30"></a>
+                <a href="https://instagram.com"><img src="images/instagram.webp" alt="Instagram Logo" class="social-icon" width="30" height="30"></a>
+                <a href="https://tiktok.com"><img src="images/tiktok.webp" alt="TikTok Logo" class="social-icon" width="30" height="30"></a>
+                </div>
             </div>
         </aside>
     </div>

@@ -23,10 +23,6 @@ session_start();
         </nav>
     </div>
 
-    <!-- <h1 class="htext">Thank you for your message!</h1>
-    <p class = "ptext">I will get back to you as soon as possible.</p>
-    <p class = "ptext"> <a href="index.html">Return Home</a> </p> -->
-
     <?php
     echo "<h1 class=htext>Thank you for your submission, " . htmlspecialchars($_SESSION['name']) . ".</h1>";
 

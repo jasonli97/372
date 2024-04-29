@@ -30,7 +30,7 @@ if(isset($_POST['name'])) {
         </nav>
     </div>
 
-    <h1 class="htext">Contact Me</h1>
+    <h1 class="htext">Contact Me <img src="images/phone_icon.png" alt="Phone Icon" class="icon" width="30" height="30"></h1>
     <div class="content">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" novalidate>
             <label for="name">Name</label>
