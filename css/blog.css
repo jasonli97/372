@@ -17,12 +17,13 @@
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 20px auto;
+    align-items: flex-start;
 }
 main {
     flex: 2;
     padding: 20px;
-    background-color: #F7A9A8;
     margin-right: 20px;
+    background-color: #EF798A;
 }
 
 aside {
@@ -43,6 +44,7 @@ aside {
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
+        align-items: stretch;
     }
 
     aside {
@@ -55,4 +57,30 @@ aside {
         order: 1; 
         margin-right: 0px;
     }
+}
+
+article {
+    border: 2px solid rgb(223, 160, 160); 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    background-color: #f7a9a8; 
+    border-radius: 5px;
+}
+
+.backBttn {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(229, 169, 238);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#generateFact {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(229, 169, 238);
+    border: none;
+    color: white;
+    cursor: pointer;
 }
