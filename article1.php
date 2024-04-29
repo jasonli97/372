@@ -1,3 +1,9 @@
+<?php 
+    date_default_timezone_set('America/New_York');
+    include 'includes/database-connection.php';
+    include 'includes/commentsInc.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +11,7 @@
     <title>Blog</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/post.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -20,12 +27,12 @@
             </ul>
         </nav>
     </div>
- 
+
     <div class="container">
         <main>
-            <h1 class="pHeader">Latest Post</h1>
             <article>
-                <h1 class="pHeader"><a href = "article1.php">Introductions</a></h1>
+                <button class="backBttn" onclick="window.location.href='blog.html'">Back</button>
+                <h1 class="pHeader">Introductions</h1>
 
                 <h2 class="pHeader">Date: 3-6-2024</h2>
 
@@ -74,6 +81,18 @@
                 </p>
                 <p class = "pContent">To view the photos please head to the <a href="photo.html">photo gallery</a>page!</p>
             </article>
+            <?php
+            echo "<form method='POST' action='".setComments($conn)."'>
+                <input type='hidden' name='uid' value='Anonymous'>
+                <input type='hidden' name='date' value='".date('M-d-y h:i A')."'>
+                <textarea name='message'></textarea><br>
+                <button type='submit' name='commentSubmit' class='postBttn'>Comment</button>
+            </form>";
+
+            getComments($conn);
+            ?>
+
+
         </main>
         
         <aside>

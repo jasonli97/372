@@ -1,0 +1,81 @@
+textarea {
+    width: 400px;
+    height: 80px;
+    background-color: white;
+    resize: none;
+}
+
+.postBttn {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(229, 169, 238);
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.editBttn {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(229, 169, 238);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.comment-box {
+    width: 400px;
+    padding: 20px;
+    margin-bottom: 4px;
+    background-color: #f7a9a8;
+    border-radius: 4px;
+    position: relative;
+}
+
+.comment-box p{
+    font-family:sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    color: white;
+    font-weight: 100;
+}
+
+.editBox {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.editBox button{
+    width: 40px;
+    height: 20px;
+    color: white;
+    background-color: #f7a9a8;
+    border: none;
+    opacity: 0.7;
+}
+
+.Box button:hover{
+    opacity: 1;
+}
+
+.deleteBox {
+    position: absolute;
+    top: 0px;
+    right: 60px;
+}
+
+.deleteBox button{
+    width: 40px;
+    height: 20px;
+    color: white;
+    background-color: #f7a9a8;
+    border: none;
+    opacity: 0.7;
+}
+
+.deleteBox button:hover{
+    opacity: 1;
+}
+
