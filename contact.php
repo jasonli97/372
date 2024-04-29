@@ -15,6 +15,8 @@ if(isset($_POST['name'])) {
     <title>Contact</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/form.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
     <div class="header">
