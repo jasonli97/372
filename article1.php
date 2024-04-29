@@ -85,7 +85,8 @@
             echo "<form method='POST' action='".setComments($conn)."'>
                 <input type='hidden' name='uid' value='Anonymous'>
                 <input type='hidden' name='date' value='".date('M-d-y h:i A')."'>
-                <textarea name='message'></textarea><br>
+                <label for='message'></label><br>
+                <textarea name='message' id='message'></textarea><br>
                 <button type='submit' name='commentSubmit' class='postBttn'>Comment</button>
             </form>";
 

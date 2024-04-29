@@ -14,7 +14,11 @@ $options  = [                        // Options for how PDO works
     PDO::ATTR_EMULATE_PREPARES   => false,
 ];                                                                  // Set PDO options
 
-$conn =  mysqli_connect($server, $username, $password, $db);            
+$conn = mysqli_connect($server, $username, $password, $db);
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 
 // DO NOT CHANGE ANYTHING BENEATH THIS LINE
 $dsn = "$type:host=$server;dbname=$db;port=$port;charset=$charset"; // Create DSN
