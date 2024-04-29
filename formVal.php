@@ -34,7 +34,7 @@
             $phone = test_input($_POST["phone"]);
             // check if phone number is valid
             if (!preg_match("/^(\d{3}-\d{3}-\d{4}|\d{10})$/", $phone)) {
-            $phoneErr = "Invalid phone number format. Please use the format XXX-XXX-XXXX or XXXXXXXXXX";
+            $phoneErr = "Invalid phone number. Please use the format XXX-XXX-XXXX or XXXXXXXXXX";
             }
         }
 
@@ -58,9 +58,9 @@
         $_SESSION['phone'] = $phone; // Store phone in session
 
         // Set cookies
-        setcookie('name', $name, time() + 86400 * 30, '/'); // 30-day cookie
-        setcookie('email', $email, time() + 86400 * 30, '/');
-        setcookie('phone', $phone, time() + 86400 * 30, '/');
+        setcookie('name', $name, time() + 86400, '/'); // 30-day cookie
+        setcookie('email', $email, time() + 86400, '/');
+        setcookie('phone', $phone, time() + 86400, '/');
 
         
         // Check if there are no errors in the form
