@@ -33,8 +33,8 @@
         } else {
             $phone = test_input($_POST["phone"]);
             // check if phone number is valid
-            if (!preg_match("/^\d{3}-\d{3}-\d{4}$/", $phone)) {
-                $phoneErr = "Invalid phone number format. Please use the format XXX-XXX-XXXX";
+            if (!preg_match("/^(\d{3}-\d{3}-\d{4}|\d{10})$/", $phone)) {
+            $phoneErr = "Invalid phone number format. Please use the format XXX-XXX-XXXX or XXXXXXXXXX";
             }
         }
 
