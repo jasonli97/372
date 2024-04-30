@@ -1,6 +1,7 @@
 <?php
 ob_start();
 
+// Function to insert comments into the database
 function setComments($conn) {
     if (isset($_POST['commentSubmit'])) {
         $uid = $_POST['uid'];
@@ -12,6 +13,7 @@ function setComments($conn) {
     }
 }
 
+// Function to retrieve and display comments from the database
 function getComments($conn) {
     $sql = "SELECT * FROM comments";
     $result = $conn->query($sql);
@@ -36,6 +38,7 @@ function getComments($conn) {
     }
 }
 
+// Function to update comments in the database
 function editComments($conn) {
     if (isset($_POST['commentSubmit'])) {
         $cid = $_POST['cid'];
@@ -47,9 +50,9 @@ function editComments($conn) {
         $result = $conn->query($sql);
         header("Location: article1.php");
     }
-    
 }
 
+// Function to delete comments from the database
 function deleteComments($conn) {
     if (isset($_POST['commentDelete'])) {
         $cid = $_POST['cid'];
